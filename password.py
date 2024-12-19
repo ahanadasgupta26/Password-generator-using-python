@@ -32,15 +32,15 @@ def genarate(minlen,num=True,splch=True):
     return pwd
    
 def check_strength(pwd):
-    length = len(pwd)
-    has_upper = any(c.isupper() for c in pwd)
-    has_lower = any(c.islower() for c in pwd)
-    has_digit = any(c.isdigit() for c in pwd)
-    has_special = any(c in string.punctuation for c in pwd)
+    length=len(pwd)
+    has_upper=any(c.isupper() for c in pwd)
+    has_lower=any(c.islower() for c in pwd)
+    has_digit=any(c.isdigit() for c in pwd)
+    has_special=any(c in string.punctuation for c in pwd)
     
-    if length >= 12 and has_upper and has_lower and has_digit and has_special:
+    if length >=12 and has_upper and has_lower and has_digit and has_special:
         return "Strong"
-    elif length >= 8 and ((has_upper and has_lower) or (has_digit and has_special)):
+    elif length >=8 and ((has_upper and has_lower) or (has_digit and has_special)):
         return "Moderate"
     else:
         return "Weak"
